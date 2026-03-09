@@ -1,0 +1,311 @@
+@import url('https://fonts.cdnfonts.com/css/codec-pro');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Firelight Tours - Flat Design System with Codec Pro */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Codec Pro', sans-serif;
+  --font-display: 'Codec Pro', sans-serif;
+  --font-mono: var(--font-geist-mono);
+  
+  /* Brand Colors - Flat Design */
+  --color-forest: var(--forest);
+  --color-forest-dark: var(--forest-dark);
+  --color-forest-light: var(--forest-light);
+  --color-burnt: var(--burnt);
+  --color-burnt-dark: var(--burnt-dark);
+  --color-burnt-light: var(--burnt-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-sand: var(--sand);
+  --color-terracotta: var(--terracotta);
+  
+  /* Component Colors */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  
+  /* Rounded Design - 40px base */
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-lg: 32px;
+  --radius-xl: 40px;
+  --radius-2xl: 48px;
+}
+
+:root {
+  /* Flat Design Radius - 40px standard */
+  --radius: 40px;
+  
+  /* Premium Light Theme - Soft Cream Background */
+  --background: #FAF8F5;
+  --foreground: #1A1A1A;
+  
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  
+  /* Forest Green - Primary */
+  --forest: #2D5A27;
+  --forest-dark: #1E3D1A;
+  --forest-light: #4A8B42;
+  
+  /* Burnt Orange/Terracotta - Accent */
+  --burnt: #D4652F;
+  --burnt-dark: #B54A1F;
+  --burnt-light: #E88A5A;
+  
+  /* Supporting Colors */
+  --cream: #F5F2ED;
+  --cream-dark: #E8E4DD;
+  --sand: #D4C5B0;
+  --terracotta: #C4785A;
+  
+  /* Primary = Forest Green */
+  --primary: #2D5A27;
+  --primary-foreground: #FFFFFF;
+  
+  /* Secondary = Cream */
+  --secondary: #F5F2ED;
+  --secondary-foreground: #1A1A1A;
+  
+  --muted: #F0EDE8;
+  --muted-foreground: #6B6B6B;
+  
+  /* Accent = Burnt Orange */
+  --accent: #D4652F;
+  --accent-foreground: #FFFFFF;
+  
+  --destructive: #DC2626;
+  
+  --border: #E5E2DD;
+  --input: #F0EDE8;
+  --ring: #2D5A27;
+  
+  /* Charts */
+  --chart-1: #2D5A27;
+  --chart-2: #D4652F;
+  --chart-3: #C4785A;
+  --chart-4: #4A8B42;
+  --chart-5: #D4C5B0;
+  
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #2D5A27;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F2ED;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E5E2DD;
+  --sidebar-ring: #2D5A27;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #FAF8F5;
+  
+  --card: #262626;
+  --card-foreground: #FAF8F5;
+  
+  --popover: #262626;
+  --popover-foreground: #FAF8F5;
+  
+  --forest: #4A8B42;
+  --forest-dark: #2D5A27;
+  --forest-light: #6BAF64;
+  
+  --burnt: #E88A5A;
+  --burnt-dark: #D4652F;
+  --burnt-light: #F5A87A;
+  
+  --primary: #4A8B42;
+  --primary-foreground: #1A1A1A;
+  
+  --secondary: #333333;
+  --secondary-foreground: #FAF8F5;
+  
+  --muted: #333333;
+  --muted-foreground: #A0A0A0;
+  
+  --accent: #E88A5A;
+  --accent-foreground: #1A1A1A;
+  
+  --destructive: #EF4444;
+  
+  --border: #404040;
+  --input: #333333;
+  --ring: #4A8B42;
+  
+  --sidebar: #262626;
+  --sidebar-foreground: #FAF8F5;
+  --sidebar-primary: #4A8B42;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #FAF8F5;
+  --sidebar-border: #404040;
+  --sidebar-ring: #4A8B42;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Codec Pro', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Flat Design Components */
+@layer components {
+  /* Rounded Cards - 40px */
+  .card-flat {
+    @apply bg-card rounded-[40px] p-6;
+  }
+  
+  /* Flat Buttons */
+  .btn-flat {
+    @apply rounded-full px-8 py-4 font-semibold transition-colors duration-200;
+  }
+  
+  .btn-flat-primary {
+    @apply bg-forest text-white hover:bg-forest-dark;
+  }
+  
+  .btn-flat-accent {
+    @apply bg-burnt text-white hover:bg-burnt-dark;
+  }
+  
+  .btn-flat-outline {
+    @apply border-2 border-forest text-forest hover:bg-forest hover:text-white;
+  }
+  
+  /* Section Padding */
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+  
+  /* Container */
+  .container-flat {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Image Container - 40px radius */
+  .img-flat {
+    @apply rounded-[40px] overflow-hidden;
+  }
+  
+  /* Flat Input */
+  .input-flat {
+    @apply rounded-full px-6 py-4 bg-cream border-0 focus:ring-2 focus:ring-forest;
+  }
+  
+  /* Custom Scrollbar - Flat Style */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-cream rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-sand rounded-full hover:bg-forest/30;
+  }
+  
+  /* Hide scrollbar but allow scrolling */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Flat Badge */
+  .badge-flat {
+    @apply rounded-full px-4 py-1.5 text-sm font-medium;
+  }
+}
+
+/* Smooth Image Loading */
+img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+img:not([loading]) {
+  opacity: 1;
+}
+
+/* Focus Styles - Flat Design */
+*:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--forest);
+  color: white;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}

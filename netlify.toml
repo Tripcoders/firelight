@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
   NEXT_TELEMETRY_DISABLED = "1"
+  DATABASE_URL = "postgresql://neondb_owner:npg_1ALlX7ZDHrzy@ep-lucky-pine-akfu1uln-pooler.c-3.us-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 
 [[headers]]
   for = "/*"
